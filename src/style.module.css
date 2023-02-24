@@ -9,16 +9,19 @@
 
 .header {
 
-padding: 2px;
+flex: 2;
+background: blue;
 
 }
 
 .tv_show_details {
-    padding: 4px;
+    flex: 4;
+    background: red;
 
 }
 
-.recommended-tv_shows {
+.recommended_tv_shows {
 
-    padding: 4px;
+    flex: 2;
+    background: green;
 }
