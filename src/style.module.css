@@ -10,18 +10,18 @@
 .header {
 
 flex: 2;
-background: blue;
+
 
 }
 
 .tv_show_details {
     flex: 4;
-    background: red;
+   
 
 }
 
 .recommended_tv_shows {
 
     flex: 2;
-    background: green;
+    
 }

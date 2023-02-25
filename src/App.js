@@ -1,6 +1,9 @@
+import { TVShowAPI } from './api/tv-show';
 import './global.css';
 // import './App.css';
 import s from './style.module.css';
+
+TVShowAPI.fetchPopulars();
 
 function App() {
   return (
