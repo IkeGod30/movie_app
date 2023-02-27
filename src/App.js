@@ -5,6 +5,10 @@ import s from './style.module.css';
 import { useState, useEffect} from 'react';
 import { BACKDROP_BASE_URL} from './config';
 import { TVShowDetails} from "./components/TVShowDetails/TVShowDetails";
+import { Logo } from "./components/Logo/Logo";
+import LogoImg  from "./assets/images/logo.png";
+import { TVShowListItem } from "./components/TVShowListItem/TVShowListItem";
+
 
 
 
@@ -43,9 +47,9 @@ function App() {
       <div className={s.header}>
         <div className="row">
           <div className="col-4">
-            <div>Logo</div>
-            <div>Subtitle</div>
-                {/* <p>{TVShowAPI.response.data.result[0].name}</p> */}
+            <Logo img={LogoImg} title={"What to Watch"} subtitle={"Find a Show you like"} />
+          
+               
 
           </div>
            <div className="col-md-12 col-lg-4">
@@ -58,7 +62,9 @@ function App() {
       <div className={s.tv_show_details}>
         {currentTVShow && <TVShowDetails tvShow={currentTVShow} />}
       </div>
-      <div className={s.recommended_tv_shows}>Recommended TV Shows</div>
+      <div className={s.recommended_tv_shows}></div>
+      <TVShowListItem tvShow={currentTVShow} />
+      {/* {currentTVShow && <TVShowListItem tvShow={currentTVShow} />} */}
     </div>
   )
 }
@@ -67,25 +73,5 @@ function App() {
 
 
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-        
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
