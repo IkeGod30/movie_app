@@ -1,6 +1,5 @@
 import { TVShowAPI } from './api/tv-show';
 import './global.css';
-// import './App.css';
 import s from './style.module.css';
 import { useState, useEffect} from 'react';
 import { BACKDROP_BASE_URL} from './config';
@@ -62,11 +61,13 @@ function App() {
       <div className={s.tv_show_details}>
         {currentTVShow && <TVShowDetails tvShow={currentTVShow} />}
       </div>
-      <div className={s.recommended_tv_shows}></div>
-      <TVShowListItem tvShow={currentTVShow} />
-      {/* {currentTVShow && <TVShowListItem tvShow={currentTVShow} />} */}
+      <div className={s.recommended_shows}>
+        {/* PLEASE ENABLE THE BELOW */}
+      <TVShowListItem tvShow={currentTVShow} /> 
+      
     </div>
-  )
+    </div>
+  );
 }
 
 
