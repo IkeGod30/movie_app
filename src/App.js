@@ -16,6 +16,7 @@ import { TVShowListItem } from "./components/TVShowListItem/TVShowListItem";
 
 function App() {
   const [currentTVShow, setcurrentTVShow] = useState();
+  const [recommendationList, setRecommendationList] = useState([]);
 
   async function fetchPopulars() {
     const popularTVShowList = await TVShowAPI.fetchPopulars();
@@ -24,9 +25,26 @@ function App() {
     }
   }
 
+  async function fetchRecommendations(tvShowId) {
+    const recommendationListResp = await TVShowAPI.fetchRecommendations(tvShowId);
+    if (recommendationListResp.length > 0) {
+    setRecommendationList(recommendationListResp.slice(0, 10));
+    }
+  }
+
   useEffect(() => {
     fetchPopulars();
     }, []);
+
+    useEffect(() => {
+      if(currentTVShow) {
+        fetchRecommendations(currentTVShow.id);
+      }
+     }, [currentTVShow]);
+
+     console.log(recommendationList);
+
+
   // useEffect(async ()=> {
   //   (async()=>{
   //     const popularTVShowList = await TVShowAPI.fetchPopulars();
