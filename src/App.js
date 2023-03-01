@@ -12,7 +12,7 @@ import { TVShowListItem } from "./components/TVShowListItem/TVShowListItem";
 
 
 
-TVShowAPI.fetchPopulars();
+  TVShowAPI.fetchPopulars();
 
 function App() {
   const [currentTVShow, setcurrentTVShow] = useState();
@@ -61,14 +61,46 @@ function App() {
       <div className={s.tv_show_details}>
         {currentTVShow && <TVShowDetails tvShow={currentTVShow} />}
       </div>
+
       <div className={s.recommended_shows}>
-        {/* PLEASE ENABLE THE BELOW */}
-      <TVShowListItem tvShow={currentTVShow} /> 
-      
+      {currentTVShow &&  
+      <TVShowListItem 
+      tvShow={currentTVShow} 
+      onClick={(tvShow)=> {
+        console.log('I have been clicked', tvShow);
+      }} 
+      />
+    }
     </div>
+
+    <div className={s.recommended_shows}>
+      {currentTVShow &&  
+      <TVShowListItem 
+      tvShow={currentTVShow} 
+      onClick={(tvShow)=> {
+        console.log('I have been clicked', tvShow);
+      }} 
+      />
+    }
     </div>
+
+    <div className={s.recommended_shows}>
+      {currentTVShow &&  
+      <TVShowListItem 
+      tvShow={currentTVShow} 
+      onClick={(tvShow)=> {
+        console.log('I have been clicked', tvShow);
+      }} 
+      />
+    }
+    </div>
+    
+    </div>
+    
   );
+  
 }
+
 
 
 
