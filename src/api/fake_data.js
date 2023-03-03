@@ -22,7 +22,7 @@ export const FAKE_POPULARS = [{
 ];
 
 export const FAKE_RECOMMENDATIONS = [{
-  
+
     "adult": false,
     "backdrop_path": "/mNHRGO1gFpR2CYZdANe72kcKq7G.jpg",
     "id": 153312,
@@ -499,4 +499,4 @@ export const FAKE_RECOMMENDATIONS = [{
       "US"
     ]
   }
-]
+];
