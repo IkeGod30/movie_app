@@ -12,7 +12,7 @@ import { TVShowList } from "./components/TVShowList/TVShowList";
 
   TVShowAPI.fetchPopulars();
 
-function App() {
+export function App() {
   const [currentTVShow, setcurrentTVShow] = useState();
   const [recommendationList, setRecommendationList] = useState([]);
 
@@ -34,7 +34,7 @@ function App() {
     fetchPopulars();
     }, []);
 
-    useEffect(() => {
+  useEffect(() => {
       if(currentTVShow) {
         fetchRecommendations(currentTVShow.id);
       }
@@ -45,7 +45,8 @@ function App() {
 
 
 
-  console.log(currentTVShow);
+     console.log(currentTVShow);
+
   return (
     <div className={s.main_container}
       style={{ 
@@ -74,7 +75,7 @@ function App() {
       </div>
 
       <div className={s.recommended_shows}>
-      {currentTVShow && <TVShowList TVShowList={recommendationList} />}
+      {currentTVShow && <TVShowList tvShowList={recommendationList} />}
     </div>
     
     </div>
