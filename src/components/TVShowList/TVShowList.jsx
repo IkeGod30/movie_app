@@ -4,7 +4,7 @@ import { TVShowListItem } from "../TVShowListItem/TVShowListItem";
 export function TVShowList({ tvShowList, onClickItem }) {
     return(
         <div>
-            <div className={s.title}>You'll definitely like :</div>
+            <div className={s.title}>Interesting shows to check out :</div>
             <div className={s.list}>
             {
                 tvShowList.map((tvShow)=>{

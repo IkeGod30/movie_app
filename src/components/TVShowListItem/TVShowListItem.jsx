@@ -18,6 +18,7 @@ export function TVShowListItem({ tvShow, onClick }) {
          ? tvShow.name.slice(0, MAX_TITLE_CHAR) + "..." 
          : tvShow.name}
         </div>
+        
         </div>
     );
 }

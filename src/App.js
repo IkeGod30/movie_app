@@ -10,7 +10,7 @@ import { TVShowListItem } from "./components/TVShowListItem/TVShowListItem";
 import { TVShowList } from "./components/TVShowList/TVShowList";
 
 
-  TVShowAPI.fetchPopulars();
+TVShowAPI.fetchPopulars();
 
 export function App() {
   const [currentTVShow, setcurrentTVShow] = useState();
@@ -42,9 +42,6 @@ export function App() {
 
      console.log(recommendationList);
 
-
-
-
      console.log(currentTVShow);
 
      function updateCurrentTVShow(tvShow) {
@@ -65,14 +62,11 @@ export function App() {
         <div className="row">
           <div className="col-4">
             <Logo img={LogoImg} title={"What to Watch"} subtitle={"Find a Show you like"} />
-          
-               
-
           </div>
-           <div className="col-md-12 col-lg-4">
-            <input style={{ width: "100%" }} type="text" />
 
-           </div>
+           {/* <div className="col-md-12 col-lg-4">
+            <input style={{ width: "100%" }} type="text" />
+           </div> */}
 
         </div>
       </div>
@@ -89,9 +83,6 @@ export function App() {
   );
   
 }
-
-
-
 
 
 
