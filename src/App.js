@@ -6,7 +6,7 @@ import { BACKDROP_BASE_URL} from './config';
 import { TVShowDetails} from "./components/TVShowDetails/TVShowDetails";
 import { Logo } from "./components/Logo/Logo";
 import LogoImg  from "./assets/images/logo.png";
-import { TVShowListItem } from "./components/TVShowListItem/TVShowListItem";
+// import { TVShowListItem } from "./components/TVShowListItem/TVShowListItem";
 import { TVShowList } from "./components/TVShowList/TVShowList";
 
 
@@ -57,27 +57,19 @@ export function App() {
         : "black",
         }}
       >
-
       <div className={s.header}>
         <div className="row">
           <div className="col-4">
             <Logo img={LogoImg} title={"What to Watch"} subtitle={"Find a Show you like"} />
           </div>
-
-           {/* <div className="col-md-12 col-lg-4">
-            <input style={{ width: "100%" }} type="text" />
-           </div> */}
-
         </div>
       </div>
       <div className={s.tv_show_details}>
         {currentTVShow && <TVShowDetails tvShow={currentTVShow} />}
       </div>
-
       <div className={s.recommended_shows}>
       {currentTVShow && <TVShowList onClickItem={updateCurrentTVShow} tvShowList={recommendationList} />}
     </div>
-    
     </div>
     
   );
