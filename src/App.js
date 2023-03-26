@@ -50,6 +50,13 @@ export function App() {
 
      }
 
+     async function fetchByTitle(title) {
+      const searchResponse = await TVShowAPI.fetchByTitle(title);
+      if (searchResponse.length > 0) {
+        setcurrentTVShow(searchResponse[0])
+      
+      }
+    }
 
   return (
     <div className={s.main_container}
@@ -64,7 +71,7 @@ export function App() {
             <Logo img={LogoImg} title={"What to Watch"} subtitle={"Find a Show you like"} />
           </div>
           <div className='col-md-12 col-lg-4'>
-            <SearchBar />
+            <SearchBar onSubmit={fetchByTitle} />
           </div>
         </div>
       </div>
