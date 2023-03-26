@@ -8,6 +8,7 @@ import { Logo } from "./components/Logo/Logo";
 import LogoImg  from "./assets/images/logo.png";
 // import { TVShowListItem } from "./components/TVShowListItem/TVShowListItem";
 import { TVShowList } from "./components/TVShowList/TVShowList";
+import { SearchBar } from './components/SearchBar/SearchBar';
 
 
 TVShowAPI.fetchPopulars();
@@ -61,6 +62,9 @@ export function App() {
         <div className="row">
           <div className="col-4">
             <Logo img={LogoImg} title={"What to Watch"} subtitle={"Find a Show you like"} />
+          </div>
+          <div className='col-md-12 col-lg-4'>
+            <SearchBar />
           </div>
         </div>
       </div>
